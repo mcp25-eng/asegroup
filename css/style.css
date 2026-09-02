@@ -1,0 +1,330 @@
+:root {
+  --navy: #070b16;
+  --navy-2: #0c1426;
+  --gold: #c4a574;
+  --gold-soft: #e8d5b0;
+  --gold-dim: rgba(196, 165, 116, 0.35);
+  --ink: #0a122a;
+  --muted: #6e7a92;
+  --white: #f7f4ee;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  background: var(--navy);
+  color: var(--white);
+  font-family: "Outfit", system-ui, sans-serif;
+  min-height: 100svh;
+}
+
+#scene {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.vignette {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 50% 42%, transparent 18%, rgba(7, 11, 22, 0.55) 70%, rgba(7, 11, 22, 0.92) 100%),
+    radial-gradient(circle at 50% 50%, rgba(196, 165, 116, 0.08), transparent 42%);
+}
+
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.07;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+}
+
+.page {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100svh;
+  padding: 28px 24px 22px;
+}
+
+.brand-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 11px;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0;
+  animation: rise 1.2s 0.15s ease forwards;
+}
+
+.brand-mark .dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 10px var(--gold);
+}
+
+.stage {
+  position: relative;
+  display: grid;
+  place-items: center;
+  perspective: 1400px;
+}
+
+.rig {
+  position: relative;
+  display: grid;
+  place-items: center;
+  transform-style: preserve-3d;
+}
+
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  border: 1px solid var(--gold-dim);
+  pointer-events: none;
+  transform-style: preserve-3d;
+}
+
+.orbit-a {
+  width: min(78vw, 640px);
+  height: min(78vw, 640px);
+  animation: orbit-spin 28s linear infinite;
+  box-shadow: inset 0 0 40px rgba(196, 165, 116, 0.05);
+}
+
+.orbit-b {
+  width: min(62vw, 500px);
+  height: min(62vw, 500px);
+  border-color: rgba(196, 165, 116, 0.22);
+  animation: orbit-spin-rev 38s linear infinite;
+}
+
+.orbit-c {
+  width: min(90vw, 760px);
+  height: min(90vw, 760px);
+  border-style: dashed;
+  border-color: rgba(196, 165, 116, 0.14);
+  animation: orbit-spin 52s linear infinite reverse;
+}
+
+.orbit::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  margin-left: -4px;
+  border-radius: 50%;
+  background: var(--gold-soft);
+  box-shadow: 0 0 16px 4px rgba(196, 165, 116, 0.65);
+}
+
+.card {
+  position: relative;
+  width: min(92vw, 560px);
+  padding: 42px 40px 38px;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(247, 244, 238, 0.94));
+  border-radius: 28px;
+  transform-style: preserve-3d;
+  transform: translateZ(40px);
+  box-shadow:
+    0 40px 90px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(196, 165, 116, 0.4),
+    0 0 80px rgba(196, 165, 116, 0.16);
+  opacity: 0;
+  animation: card-in 1.35s 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.card-glow {
+  position: absolute;
+  inset: -2px;
+  border-radius: 30px;
+  pointer-events: none;
+  background: linear-gradient(120deg, transparent 20%, rgba(232, 213, 176, 0.55) 50%, transparent 80%);
+  opacity: 0.35;
+  mix-blend-mode: screen;
+  animation: sheen 6.5s ease-in-out infinite;
+}
+
+.logo {
+  display: block;
+  width: min(78%, 280px);
+  height: auto;
+  margin: 0 auto 8px;
+  transform: translateZ(28px);
+}
+
+.rule {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 22px auto 26px;
+  width: min(72%, 280px);
+}
+
+.rule span {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.rule i {
+  width: 7px;
+  height: 7px;
+  rotate: 45deg;
+  background: var(--gold);
+  box-shadow: 0 0 10px var(--gold);
+}
+
+.msg {
+  transform: translateZ(18px);
+}
+
+.msg.tr {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.45rem, 3.4vw, 2.15rem);
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--ink);
+  letter-spacing: 0.01em;
+}
+
+.msg.en {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  font-weight: 300;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #8a734c;
+}
+
+footer {
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(196, 165, 116, 0.7);
+  opacity: 0;
+  animation: rise 1.2s 0.7s ease forwards;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes card-in {
+  from {
+    opacity: 0;
+    transform: translateZ(-80px) rotateX(12deg) scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(40px) rotateX(0) scale(1);
+  }
+}
+
+@keyframes orbit-spin {
+  from {
+    transform: translate(-50%, -50%) rotateX(68deg) rotateZ(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotateX(68deg) rotateZ(360deg);
+  }
+}
+
+@keyframes orbit-spin-rev {
+  from {
+    transform: translate(-50%, -50%) rotateX(62deg) rotateY(12deg) rotateZ(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotateX(62deg) rotateY(12deg) rotateZ(-360deg);
+  }
+}
+
+@keyframes sheen {
+  0%,
+  100% {
+    opacity: 0.18;
+    transform: translateX(-8%);
+  }
+  50% {
+    opacity: 0.45;
+    transform: translateX(8%);
+  }
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 20px 16px 16px;
+  }
+
+  .brand-mark span:last-child {
+    display: none;
+  }
+
+  .card {
+    padding: 32px 22px 28px;
+    border-radius: 22px;
+  }
+
+  .orbit-c {
+    display: none;
+  }
+
+  .msg.en {
+    letter-spacing: 0.08em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .brand-mark,
+  .card,
+  footer {
+    opacity: 1;
+  }
+}
