@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://asegroup.com.tr/sitemap.xml

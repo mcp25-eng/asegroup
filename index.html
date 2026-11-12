@@ -6,62 +6,199 @@
     <meta name="theme-color" content="#070b16" />
     <meta
       name="description"
-      content="ASE Group — Sitemiz yakında aktif olacaktır. Our website will be active soon."
+      content="ASE Group — yapı, ithalat-ihracat, araç şarj istasyonu, tadilat, detaylı keşif ve görsel hafıza."
     />
-    <title>ASE Group — Yakında / Coming Soon</title>
+    <title>ASE Group — Yapı · Ticaret · Enerji</title>
     <link rel="icon" type="image/png" href="assets/logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Outfit:wght@300;400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/site.css" />
   </head>
-  <body>
-    <canvas id="scene" aria-hidden="true"></canvas>
-    <div class="vignette"></div>
-    <div class="grain"></div>
+  <body data-page="home">
+    <div id="preloader">
+      <div>
+        <img class="pre-logo" src="assets/logo.png" alt="ASE Group" />
+        <div class="pre-bar"><span></span></div>
+      </div>
+    </div>
+    <div class="cursor" id="cursor"></div>
+    <div id="nav-root"></div>
 
-    <div class="page">
-      <header class="brand-mark">
-        <span>ASE GROUP</span>
-        <span class="dot"></span>
-        <span>asegroup.com.tr</span>
-      </header>
+    <main>
+      <section class="hero">
+        <div class="hero-media">
+          <img src="assets/img/hero.jpg" alt="" />
+          <canvas id="hero-canvas"></canvas>
+        </div>
+        <div class="hero-shade"></div>
+        <div class="hero-copy">
+          <p class="kicker" data-i18n="hero_kicker">ASE Group · Türkiye</p>
+          <h1 class="serif" data-i18n="hero_title">Tek çatı altında yapı, ticaret ve enerji.</h1>
+          <p class="hero-lead" data-i18n="hero_lead">
+            Yapı ithalat-ihracat kalemleri, araç elektrik, şarj istasyonu, tadilat ve detaylı saha gezisi.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-solid" href="faaliyetler.html" data-i18n="hero_cta1">Faaliyetleri keşfedin</a>
+            <a class="btn btn-ghost" href="iletisim.html" data-i18n="hero_cta2">İletişime geçin</a>
+          </div>
+        </div>
+      </section>
 
-      <main class="stage">
-        <div class="rig" id="rig">
-          <div class="orbit orbit-a"></div>
-          <div class="orbit orbit-b"></div>
-          <div class="orbit orbit-c"></div>
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+          <span data-i18n="ticker">Yapı · İthalat · İhracat · Alım Satım · Araç Elektrik · Şarj İstasyonu · Tadilat · Detaylı Gez · Görsel Hafıza ·</span>
+          <span>Yapı · İthalat · İhracat · Alım Satım · Araç Elektrik · Şarj İstasyonu · Tadilat · Detaylı Gez · Görsel Hafıza ·</span>
+        </div>
+      </div>
 
-          <article class="card">
-            <div class="card-glow"></div>
-            <img
-              class="logo"
-              src="assets/logo.png"
-              alt="ASE Group"
-              width="263"
-              height="107"
-            />
-            <div class="rule" aria-hidden="true">
-              <span></span>
-              <i></i>
-              <span></span>
-            </div>
-            <p class="msg tr">Sitemiz yakında aktif olacaktır</p>
-            <p class="msg en">Our website will be active soon</p>
+      <section class="section section-cream">
+        <div class="container section-head">
+          <div>
+            <p class="kicker" data-i18n="intro_kicker">Kurumsal duruş</p>
+            <h2 data-i18n="intro_title">Gösterişli değil; kalıcı bir iz.</h2>
+          </div>
+          <p data-i18n="intro_text">
+            ASE Group, yapı işlerinden uluslararası ticarete, elektrikli araç altyapısından tadilata uzanan bir faaliyet ağıdır.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container section-head">
+          <div>
+            <p class="kicker" data-i18n="pillars_kicker">Faaliyet alanları</p>
+            <h2 data-i18n="pillars_title">Altı hat. Tek standart.</h2>
+          </div>
+          <p data-i18n="pillars_text">
+            İnşaat malzemesinden şarj ünitesine, iç mekân yenilemeden saha keşfine.
+          </p>
+        </div>
+        <div class="wide pillars">
+          <a class="pillar" href="yapi.html">
+            <img src="assets/img/yapi.jpg" alt="" />
+            <span class="num">01</span>
+            <h3 data-i18n="p1_t">Yapı</h3>
+            <p data-i18n="p1_d">Konut, ticari yapı ve çelik işlerinde malzeme ile uygulamayı aynı masada tutarız.</p>
+          </a>
+          <a class="pillar" href="ticaret.html">
+            <img src="assets/img/ticaret.jpg" alt="" />
+            <span class="num">02</span>
+            <h3 data-i18n="p2_t">İthalat & İhracat</h3>
+            <p data-i18n="p2_d">Yapı ve enerji kalemlerinde alım satım, tedarik ve sınır ötesi ticaret.</p>
+          </a>
+          <a class="pillar" href="enerji.html">
+            <img src="assets/img/enerji.jpg" alt="" />
+            <span class="num">03</span>
+            <h3 data-i18n="p3_t">Araç Elektrik & Şarj</h3>
+            <p data-i18n="p3_d">Wallbox’tan DC hızlı şarja, pano ve korumadan araç elektrik altyapısına.</p>
+          </a>
+          <a class="pillar" href="tadilat.html">
+            <img src="assets/img/tadilat.jpg" alt="" />
+            <span class="num">04</span>
+            <h3 data-i18n="p4_t">Tadilat</h3>
+            <p data-i18n="p4_d">İç mekân, cephe, elektrik ve tesisat yenilemede anahtar teslim işler.</p>
+          </a>
+          <a class="pillar" href="kesif.html">
+            <img src="assets/img/kesif.jpg" alt="" />
+            <span class="num">05</span>
+            <h3 data-i18n="p5_t">Detaylı Gez</h3>
+            <p data-i18n="p5_d">Teklif öncesi yerinde keşif: ölçü, altyapı, risk ve uygulama notu.</p>
+          </a>
+          <a class="pillar" href="kesif.html">
+            <img src="assets/img/steel.jpg" alt="" />
+            <span class="num">06</span>
+            <h3 data-i18n="p6_t">Görsel Hafıza</h3>
+            <p data-i18n="p6_d">Sahayı fotoğraf ve kayıtla belgeleriz; kararlar tahminle değil görüntüyle alınır.</p>
+          </a>
+        </div>
+      </section>
+
+      <section class="split">
+        <div class="split-media">
+          <img src="assets/img/ticaret.jpg" alt="" />
+        </div>
+        <div class="split-copy">
+          <p class="kicker" data-i18n="split1_kicker">Yapı & ticaret</p>
+          <h2 data-i18n="split1_title">Kalemleri seçer, rotayı kurarız.</h2>
+          <ul>
+            <li data-i18n="split1_li1">Yapı malzemeleri ithalatı ve ihracatı</li>
+            <li data-i18n="split1_li2">Alım satım, tedarik ve stok koordinasyonu</li>
+            <li data-i18n="split1_li3">Şantiye ve tadilat için doğru kalem, doğru zaman</li>
+          </ul>
+          <a class="btn btn-ghost" href="ticaret.html" data-i18n="more">İncele</a>
+        </div>
+      </section>
+
+      <section class="split reverse">
+        <div class="split-copy">
+          <p class="kicker" data-i18n="split2_kicker">Enerji & mobilite</p>
+          <h2 data-i18n="split2_title">Şarj istasyonu ve araç elektrik.</h2>
+          <ul>
+            <li data-i18n="split2_li1">Konut, otopark ve ticari AC / DC kurulum</li>
+            <li data-i18n="split2_li2">Araç elektrik altyapısı, pano ve koruma</li>
+            <li data-i18n="split2_li3">Keşif, proje, montaj ve devreye alma</li>
+          </ul>
+          <a class="btn btn-ghost" href="enerji.html" data-i18n="more">İncele</a>
+        </div>
+        <div class="split-media">
+          <img src="assets/img/enerji.jpg" alt="" />
+        </div>
+      </section>
+
+      <div class="stats">
+        <div class="stat"><b>06</b><span data-i18n="st1">Faaliyet hattı</span></div>
+        <div class="stat"><b>02</b><span data-i18n="st2">Ticaret yönü</span></div>
+        <div class="stat"><b>01</b><span data-i18n="st3">Keşif önce</span></div>
+        <div class="stat"><b>∞</b><span data-i18n="st4">Görsel kayıt</span></div>
+      </div>
+
+      <section class="section section-cream">
+        <div class="container section-head">
+          <div>
+            <p class="kicker">ASE</p>
+            <h2 data-i18n="process_title">Keşif. Tedarik. Uygulama. Hafıza.</h2>
+          </div>
+        </div>
+        <div class="container process">
+          <article class="step">
+            <i data-i18n="s1_n">01</i>
+            <h3 data-i18n="s1_t">Keşif</h3>
+            <p data-i18n="s1_d">Yerinde detaylı gez. Ölçü, güç, malzeme ve risk netleşir.</p>
+          </article>
+          <article class="step">
+            <i data-i18n="s2_n">02</i>
+            <h3 data-i18n="s2_t">Tedarik</h3>
+            <p data-i18n="s2_d">İthalat-ihracat ağıyla doğru kalem, doğru menşe.</p>
+          </article>
+          <article class="step">
+            <i data-i18n="s3_n">03</i>
+            <h3 data-i18n="s3_t">Uygulama</h3>
+            <p data-i18n="s3_d">Yapı, tadilat veya şarj — saha disiplininde iş.</p>
+          </article>
+          <article class="step">
+            <i data-i18n="s4_n">04</i>
+            <h3 data-i18n="s4_t">Hafıza</h3>
+            <p data-i18n="s4_d">Teslim görsel kayıtla kapanır. İz kalır, tartışma biter.</p>
           </article>
         </div>
-      </main>
+      </section>
 
-      <footer>
-        <p>© 2026 ASE Group · asegroup.com.tr</p>
-      </footer>
-    </div>
+      <section class="cta">
+        <p class="kicker">ASE Group</p>
+        <h2 data-i18n="cta_title">Sahaya inelim.</h2>
+        <p data-i18n="cta_text">Projenizi, kalemi veya şarj ihtiyacınızı yazın. Keşif planını birlikte kuralım.</p>
+        <a class="btn btn-solid" href="iletisim.html" data-i18n="cta_btn">İletişim formu</a>
+      </section>
+    </main>
 
+    <div id="footer-root"></div>
     <script src="https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.min.js"></script>
-    <script src="js/scene.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/site.js"></script>
+    <script src="js/hero.js"></script>
   </body>
 </html>

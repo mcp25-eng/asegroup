@@ -1,5 +1,5 @@
 # ASE Group
 
-Geçici yayın sayfası: [asegroup.com.tr](https://asegroup.com.tr)
+Kurumsal site: [asegroup.com.tr](https://asegroup.com.tr)
 
-Sitemiz yakında aktif olacaktır / Our website will be active soon.
+Yapı, ithalat-ihracat, araç elektrik ve şarj istasyonu, tadilat, detaylı keşif ve görsel hafıza.
