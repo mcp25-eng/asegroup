@@ -152,6 +152,10 @@ window.ASE_I18N = {
     opt_survey: "Keşif",
     mail_label: "E-posta",
     web_label: "Web",
+    phone_label: "Telefon / WhatsApp",
+    wa_label: "WhatsApp ile yazın",
+    wa_tip: "WhatsApp",
+    wa_msg: "Merhaba, ASE Group ile iletişime geçmek istiyorum.",
   },
   en: {
     nav_home: "Home",
@@ -306,5 +310,9 @@ window.ASE_I18N = {
     opt_survey: "Survey",
     mail_label: "Email",
     web_label: "Web",
+    phone_label: "Phone / WhatsApp",
+    wa_label: "Message us on WhatsApp",
+    wa_tip: "WhatsApp",
+    wa_msg: "Hello, I would like to get in touch with ASE Group.",
   },
 };
