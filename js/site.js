@@ -23,7 +23,7 @@
   if (nav) {
     nav.innerHTML = `
       <header class="nav" id="nav">
-        <a class="nav-logo" href="index.html"><img src="assets/logo.png" alt="ASE Group" width="120" height="48"></a>
+        <a class="nav-logo" href="index.html"><img src="assets/logo-on-dark.png" alt="ASE Group" width="120" height="46"></a>
         <button class="nav-toggle" id="nav-toggle" aria-label="Menu"><span></span></button>
         <div class="nav-links" id="nav-links">
           <a href="index.html" data-i18n="nav_home">Ana Sayfa</a>
@@ -54,7 +54,7 @@
       <footer class="site">
         <div class="container foot-grid">
           <div>
-            <div class="foot-brand"><img src="assets/logo.png" alt="ASE Group"></div>
+            <div class="foot-brand"><img src="assets/logo-on-dark.png" alt="ASE Group"></div>
             <p data-i18n="foot_note">Yapı, ticaret ve enerji işlerinde keşif, tedarik ve uygulama.</p>
           </div>
           <div class="foot-col">

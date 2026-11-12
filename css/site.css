@@ -90,10 +90,10 @@ select {
 }
 
 .pre-logo {
-  width: min(220px, 56vw);
-  background: #fff;
-  padding: 18px 22px 14px;
-  border-radius: 16px;
+  width: min(210px, 54vw);
+  height: auto;
+  background: none;
+  padding: 0;
   animation: float-in 0.9s ease both;
 }
 
@@ -142,7 +142,7 @@ select {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  padding: 16px 28px;
+  padding: 18px 32px;
   transition: background 0.35s, backdrop-filter 0.35s, border-color 0.35s;
 }
 
@@ -153,17 +153,16 @@ select {
 }
 
 .nav-logo {
-  display: grid;
-  place-items: center;
-  background: #fff;
-  border-radius: 12px;
-  padding: 7px 10px 6px;
+  display: flex;
+  align-items: center;
   flex-shrink: 0;
+  line-height: 0;
 }
 
 .nav-logo img {
-  height: 36px;
+  height: 44px;
   width: auto;
+  display: block;
 }
 
 .nav-toggle {
@@ -820,15 +819,13 @@ footer.site {
 }
 
 .foot-brand {
-  background: #fff;
   width: fit-content;
-  padding: 10px 12px;
-  border-radius: 12px;
   margin-bottom: 16px;
 }
 
 .foot-brand img {
-  height: 42px;
+  height: 48px;
+  width: auto;
 }
 
 footer.site p,
