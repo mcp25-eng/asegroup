@@ -1,4 +1,11 @@
 (() => {
+  const dropWhatsApp = () => {
+    document.querySelectorAll(".wa-btn, a[href*='wa.me'], a[href*='whatsapp.com']").forEach((node) => node.remove());
+  };
+  dropWhatsApp();
+  document.addEventListener("DOMContentLoaded", dropWhatsApp);
+  window.addEventListener("load", dropWhatsApp);
+
   const dict = window.ASE_I18N;
   const page = document.body.dataset.page || "home";
 
