@@ -667,7 +667,7 @@ select {
   padding: 120px 20px;
   background:
     linear-gradient(180deg, rgba(7, 11, 22, 0.55), rgba(7, 11, 22, 0.88)),
-    url("../assets/img/city.jpg") center/cover;
+    url("../assets/img/cta.jpg") center/cover;
 }
 
 .cta p {
