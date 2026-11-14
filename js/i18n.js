@@ -168,7 +168,6 @@ window.ASE_I18N = {
     opt_survey: "Keşif",
     mail_label: "E-posta",
     web_label: "Web",
-    phone_label: "Telefon",
   },
   en: {
     nav_home: "Home",
@@ -339,6 +338,5 @@ window.ASE_I18N = {
     opt_survey: "Survey",
     mail_label: "Email",
     web_label: "Web",
-    phone_label: "Phone",
   },
 };

@@ -77,7 +77,6 @@
           <div class="foot-col">
             <h4 data-i18n="nav_contact">İletişim</h4>
             <a href="mailto:info@asegroup.com.tr">info@asegroup.com.tr</a>
-            <a href="tel:+905415752301">+90 541 575 23 01</a>
             <a href="https://asegroup.com.tr">asegroup.com.tr</a>
             <a href="iletisim.html" data-i18n="nav_cta">Teklif alın</a>
           </div>
